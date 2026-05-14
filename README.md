@@ -1,4 +1,4 @@
-# 🛒 Lista de Compras
+## 🛒 Lista de Compras
 
 Projeto desenvolvido em C# como exercício da Academia do Programador, com foco em Programação Orientada a Objetos, CRUD em console, validações e relacionamento entre entidades.
 
@@ -6,9 +6,9 @@ O sistema simula uma aplicação de organização de compras domésticas, permit
 
 ---
 
-# 📌 Funcionalidades
+## 📌 Funcionalidades
 
-## 📂 Módulo de Categorias
+### 📂 Módulo de Categorias
 - Cadastrar categorias
 - Editar categorias
 - Excluir categorias
@@ -16,7 +16,7 @@ O sistema simula uma aplicação de organização de compras domésticas, permit
 - Seleção de cor para categorias
 - Validação de nomes duplicados
 
-## 📦 Módulo de Produtos
+### 📦 Módulo de Produtos
 - Cadastrar produtos
 - Editar produtos
 - Excluir produtos
@@ -24,7 +24,7 @@ O sistema simula uma aplicação de organização de compras domésticas, permit
 - Relacionamento com categorias
 - Preço aproximado por produto
 
-## 🛍️ Módulo de Lista de Compras
+### 🛍️ Módulo de Lista de Compras
 - Criar listas de compras
 - Editar listas
 - Excluir listas
@@ -33,7 +33,7 @@ O sistema simula uma aplicação de organização de compras domésticas, permit
 - Data de criação automática
 - Cálculo de total gasto
 
-## 📋 Módulo de Itens da Lista
+### 📋 Módulo de Itens da Lista
 - Adicionar itens à lista
 - Remover itens da lista
 - Visualizar itens da lista
@@ -41,7 +41,7 @@ O sistema simula uma aplicação de organização de compras domésticas, permit
 
 ---
 
-# 🧠 Conceitos Trabalhados
+## 🧠 Conceitos Trabalhados
 
 - Programação Orientada a Objetos
 - Herança
@@ -58,7 +58,7 @@ O sistema simula uma aplicação de organização de compras domésticas, permit
 
 ---
 
-# 🏗️ Estrutura do Projeto
+## 🏗️ Estrutura do Projeto
 
 ```txt
 ListaDeCompras.ConsoleApp
@@ -81,7 +81,7 @@ ListaDeCompras.ConsoleApp
 ```
 
 
-# ▶️ Como Executar
+## ▶️ Como Executar
 **Pré-requisitos**
 - .NET SDK instalado
 

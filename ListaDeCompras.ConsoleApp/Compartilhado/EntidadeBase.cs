@@ -1,21 +1,19 @@
-using System;
 using System.Security.Cryptography;
 
 namespace ListaDeCompras.ConsoleApp.Compartilhado;
 
 public abstract class EntidadeBase
 {
-    public string Id { get; set; } = string.Empty;
+    public string Id { get; private set; } = string.Empty;
 
     public EntidadeBase()
     {
         Id = Convert
-            .ToHexString(RandomNumberGenerator.GetBytes(20))
-            .ToLower()
-            .Substring(0, 7);
-            
+                .ToHexString(RandomNumberGenerator.GetBytes(4))
+                .ToLower()
+                .Substring(0, 7);
     }
 
-    public abstract string[] Validar();
-    public abstract void AtualizarRegistro(EntidadeBase entidadeAtualizada);
+    public abstract List<string> Validar();
+    public abstract void AtualizarDados(EntidadeBase entidadeAtualizada);
 }

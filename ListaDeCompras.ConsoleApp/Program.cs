@@ -1,10 +1,14 @@
-﻿﻿using ListaDeCompras.ConsoleApp.Compartilhado;
+﻿﻿using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
+using ListaDeCompras.ConsoleApp.Compartilhado;
+using ListaDeCompras.ConsoleApp.ModuloCategoria;
+using ListaDeCompras.ConsoleApp.ModuloListaCompras;
 
 TelaPrincipal telaPrincipal = new TelaPrincipal();
 
 while (true)
 {
-    ITela? telaSelecionada = telaPrincipal.ApresentarMenuOpcoesPrincipal();
+    ITelaOpcoes? telaSelecionada = telaPrincipal.ApresentarMenuOpcoesPrincipal();
 
     if (telaSelecionada == null)
     {
@@ -16,7 +20,13 @@ while (true)
     {
         string? opcaoSubMenu = telaSelecionada.ObterOpcaoMenu();
 
-        if (telaSelecionada is TelaBase telaBase)
+        if (opcaoSubMenu == "S")
+        {
+            Console.Clear();
+            break;
+        }
+
+        if (telaSelecionada is ITelaCrud telaBase)
         {
             if (opcaoSubMenu == "1")
                 telaBase.Cadastrar();
@@ -29,6 +39,17 @@ while (true)
 
             else if (opcaoSubMenu == "4")
                 telaBase.VisualizarTodos(deveExibirCabecalho: true);
+        }
+        if (telaSelecionada is TelaListaCompras telaListaCompras)
+        {
+            if (opcaoSubMenu == "5")
+                telaListaCompras.AdicionarItem();
+
+            else if (opcaoSubMenu == "6")
+                telaListaCompras.RemoverItem();
+
+            else if (opcaoSubMenu == "7")
+                telaListaCompras.VisualizarItens();
         }
     }
 }
